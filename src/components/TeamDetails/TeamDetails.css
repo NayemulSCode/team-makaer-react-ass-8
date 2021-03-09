@@ -1,0 +1,45 @@
+.teamDetailsBody{
+    background-color: rgb(23, 23, 70);
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+.clubDetails{
+    background-color: skyblue;
+    border-radius: 10px;
+    color: black;
+    padding: 20px;
+    line-height: 15px;
+    /* height: 200px; */
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+.contextDetails{
+    width:50%;
+    text-align: left;
+}
+.contextImg{
+    width:50%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+}
+.contextDetails h2{
+    font-size: 15px;
+    font-weight: 600;
+}
+.contextDetails p{
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    margin-top: 0px;
+}
+.contextImg img{
+   width: 100%;
+   height: 150px;
+
+}
+.teamDetailsBody p{
+    text-align:left;
+}
