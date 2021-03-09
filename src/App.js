@@ -1,12 +1,26 @@
-
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import './App.css';
 import Home from './components/Home/Home';
+import TeamDetails from "./components/TeamDetails/TeamDetails";
 
 function App() {
   return (
     <>
-      <h4>app.js components</h4>
-      <Home />
+      <Router>
+        <Switch>
+          <Route path="/team/:idTeam" >
+            <TeamDetails></TeamDetails>
+          </Route>
+          <Route path="/" >
+            <Home />
+          </Route>
+        </Switch>
+      </Router>
     </>
   );
 }
