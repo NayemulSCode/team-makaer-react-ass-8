@@ -13,8 +13,15 @@ const Home = () => {
             //console.log(data.teams);
         })
     },[])
+
+    const home__container = {
+        marginLeft: '0',
+        marginRight: '0',
+        AlignItems: 'center',
+        width: '100%',
+    }
     return (
-        <div>
+        <div style={home__container} className="row">
             {
                 teams.map(team => (<Teams key={team.idTeam} team={team} />))
             }
