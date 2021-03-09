@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Teams from '../Teams/Teams';
 
 const Home = () => {
     const [teams, setTeams] = useState([]);
@@ -15,7 +16,7 @@ const Home = () => {
     return (
         <div>
             {
-                teams.map(team => (<h4>{team.strTeam}</h4>))
+                teams.map(team => (<Teams key={team.idTeam} team={team} />))
             }
         </div>
     );
