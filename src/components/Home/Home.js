@@ -10,7 +10,7 @@ const Home = () => {
         .then(res => res.json())
         .then(data => {
             setTeams(data.teams);
-            console.log(data.teams);
+            //console.log(data.teams);
         })
     },[])
     return (
