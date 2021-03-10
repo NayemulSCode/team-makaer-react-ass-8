@@ -14,6 +14,10 @@
     object-fit: contain;
     margin-bottom: 15px;
 }
+.clubDetailsContainer{
+    display:flex;
+    flex-direction: row;
+}
 .contextDetails{
     width:50%;
     text-align: left;
@@ -22,8 +26,6 @@
     width:50%;
     background-color: white;
     border-radius: 10px;
-    padding: 15px;
-    margin: 10px;
 }
 .contextDetails h2{
     font-size: 15px;
@@ -42,4 +44,23 @@
 }
 .teamDetailsBody p{
     text-align:left;
+}
+.socialIcon{
+    margin-right: 8px;
+    /* padding: 5px; */
+}
+@media only screen and (max-width:500px){
+    .clubDetailsContainer{
+        display:flex;
+        flex-direction: column;
+    }
+    .contextImg{
+        width:100%;
+        /* padding: 15px; */
+        margin: 0px;
+    }
+    .contextDetails{
+        width:100%;
+        text-align: left;
+    }
 }
