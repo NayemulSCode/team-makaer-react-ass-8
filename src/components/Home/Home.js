@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Teams from '../Teams/Teams';
-
 const Home = () => {
     const [teams, setTeams] = useState([]);
 
@@ -22,6 +21,9 @@ const Home = () => {
     }
     return (
         <div style={home__container} className="row">
+            <div>
+                {/* <img src="../../image/laliga.jpg" alt="Banner"/> */}
+            </div>
             {
                 teams.map(team => (<Teams key={team.idTeam} team={team} />))
             }

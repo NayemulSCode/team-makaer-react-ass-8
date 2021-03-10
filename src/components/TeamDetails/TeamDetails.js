@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import './TeamDetails.css'
+import picture from '../../image/male.png'
+import fpicture from '../../image/female.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { faFacebook, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons'
 const TeamDetails = () => {
     const {idTeam} = useParams();
     //console.log(idTeam);
@@ -15,13 +20,14 @@ const TeamDetails = () => {
         })
     },[idTeam]);
 
+    let isGender = team.strGender;
     return (
         <div className="">
            
             <img style={{width:'100%', height:'150px'}} src={team.strTeamBanner || team.strTeamBadge} alt="Team Banner"/>
             <div className="teamDetailsBody">
                 <div className=" d-center clubDetails">
-                    <div className="d-flex">
+                    <div className="clubDetailsContainer">
                         <div className="contextDetails">
                             <h2> {team.strTeam} <span>Founded: {team.intFormedYear}</span></h2>
                             <p>League: {team.strLeague}</p>
@@ -31,12 +37,21 @@ const TeamDetails = () => {
                             <p>Gender: {team.strGender}</p>
                         </div>
                         <div className="contextImg">
-                            <img src={team.strTeamBadge} alt=""/>
+                            {
+                                 team.strGender === 'Male' ? (<img src={picture} alt="male"/>):(<img src={fpicture} alt="female"/>)
+                            }
+                         
                         </div>
                     </div>
                 </div>
                 <p>{team.strDescriptionEN}</p>
+                <div>
+                    <FontAwesomeIcon className="socialIcon" icon={faFacebook} />
+                    <FontAwesomeIcon className="socialIcon" icon={faYoutube} />
+                    <FontAwesomeIcon className="socialIcon" icon={faInstagram} />
+                </div>
             </div>
+            
                 
         </div>
     );
