@@ -4,8 +4,9 @@ import './TeamDetails.css'
 import picture from '../../image/male.png'
 import fpicture from '../../image/female.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { faFutbol, faFlag, faObjectGroup, faUserFriends, faMars} from '@fortawesome/free-solid-svg-icons'
 import { faFacebook, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { Link } from 'react-router-dom';
 const TeamDetails = () => {
     const {idTeam} = useParams();
     //console.log(idTeam);
@@ -30,11 +31,11 @@ const TeamDetails = () => {
                     <div className="clubDetailsContainer">
                         <div className="contextDetails">
                             <h2> {team.strTeam} <span>Founded: {team.intFormedYear}</span></h2>
-                            <p>League: {team.strLeague}</p>
-                            <p>Country: {team.strCountry}</p>
-                            <p>Stadium: {team.strStadium}</p>
-                            <p>Capacity: {team.intStadiumCapacity}K</p>
-                            <p>Gender: {team.strGender}</p>
+                            <p><FontAwesomeIcon icon={faFutbol} /> League: {team.strLeague}</p>
+                            <p><FontAwesomeIcon icon={faFlag} /> Country: {team.strCountry}</p>
+                            <p><FontAwesomeIcon icon={faObjectGroup} /> Stadium: {team.strStadium}</p>
+                            <p><FontAwesomeIcon icon={faUserFriends} /> Capacity: {team.intStadiumCapacity}K</p>
+                            <p><FontAwesomeIcon icon={faMars} /> Gender: {team.strGender}</p>
                         </div>
                         <div className="contextImg">
                             {
@@ -46,7 +47,7 @@ const TeamDetails = () => {
                 </div>
                 <p>{team.strDescriptionEN}</p>
                 <div>
-                    <FontAwesomeIcon className="socialIcon" icon={faFacebook} />
+                    <Link to=''><FontAwesomeIcon className="socialIcon" icon={faFacebook} /></Link>
                     <FontAwesomeIcon className="socialIcon" icon={faYoutube} />
                     <FontAwesomeIcon className="socialIcon" icon={faInstagram} />
                 </div>
